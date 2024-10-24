@@ -21,7 +21,11 @@ router.route("/login").post(
     loginUser
 )
 
-
+router.route("/home").get(
+    (req,res)=>{
+        res.send("hello sunny")
+    }
+)
 //secured routes
 router.route("/logout").post(verifyJWT,logOutUser)
 router.route("/refresh-token").post(refreshAcessToken)
