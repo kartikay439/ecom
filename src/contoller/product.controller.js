@@ -56,6 +56,7 @@ const getAllProducts = asyncHandler(
             throw new ApiError(400,"Network or Code Error");
         }
 
+        console.log("All products are requested");
        return res.json(allProduct);
     }
 )
